@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <Import Project="../version.xml" />
     <PropertyGroup>
-        <TargetFrameworks>net45;net461;netcoreapp1.0;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
+        <TargetFrameworks>net45;net461;netcoreapp1.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
         <!-- <TargetFramework>net461</TargetFramework> -->
         <OutputType>Exe</OutputType>
         <AssemblyName>rtcli</AssemblyName>
@@ -23,6 +23,10 @@
         <NetCore>True</NetCore>
     </PropertyGroup>   
 <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+        <DefineConstants>$(DefineConstants);NETCORE1</DefineConstants>
+        <NetCore>True</NetCore>
+    </PropertyGroup>  	
+	<PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.2'">
         <DefineConstants>$(DefineConstants);NETCORE1</DefineConstants>
         <NetCore>True</NetCore>
     </PropertyGroup>  	
